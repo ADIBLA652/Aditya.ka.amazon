@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #232f3e;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header input {
+  padding: 8px;
+  width: 300px;
+  border: none;
+  border-radius: 4px;
+}
+
+header button {
+  padding: 8px 12px;
+  background-color: #febd69;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.product {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-details {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.product-details h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 20px;
+  color: #b12704;
+  margin-bottom: 5px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 10px;
+}
+
+.rating {
+  margin-bottom: 10px;
+  color: #ffa41c;
+}
+
+.buy-btn {
+  padding: 10px 20px;
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #232f3e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+.cart-info {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background: #ff9900;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+#cart-sidebar {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  border-left: 2px solid #ccc;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  z-index: 1001;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+#cart-sidebar.open {
+  right: 0;
+}
+
+#cart-items img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+#cart-items div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
